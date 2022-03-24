@@ -16,6 +16,7 @@ class CreateVerresCocktailsTable extends Migration
         Schema::create('verres-_cocktails', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idVerre');
+            $table->unsignedBigInteger('idCocktail');
             $table->foreign('idVerre')->references('id')->on('verres');
             $table->foreign('idCocktail')->references('id')->on('Cocktail');
             $table->timestamps();

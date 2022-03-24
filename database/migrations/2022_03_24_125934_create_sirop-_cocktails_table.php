@@ -16,6 +16,7 @@ class CreateSiropCocktailsTable extends Migration
         Schema::create('sirop-_cocktails', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idSirop');
+            $table->unsignedBigInteger('idCocktail');
             $table->foreign('idSirop')->references('id')->on('sirops');
             $table->foreign('idCocktail')->references('id')->on('Cocktail');
             $table->timestamps();

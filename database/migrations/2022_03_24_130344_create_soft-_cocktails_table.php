@@ -16,6 +16,7 @@ class CreateSoftCocktailsTable extends Migration
         Schema::create('soft-_cocktails', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idSoft');
+            $table->unsignedBigInteger('idCocktail');
             $table->foreign('idSoft')->references('id')->on('softs');
             $table->foreign('idCocktail')->references('id')->on('Cocktail');
             $table->timestamps();
