@@ -15,6 +15,7 @@ class CreateSiropCocktailsTable extends Migration
     {
         Schema::create('sirop-_cocktails', function (Blueprint $table) {
             $table->id();
+            $table->foreign('sirop-id')->references('id')->on('sirop');
             $table->timestamps();
         });
     }

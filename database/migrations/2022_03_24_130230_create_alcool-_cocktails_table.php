@@ -15,6 +15,7 @@ class CreateAlcoolCocktailsTable extends Migration
     {
         Schema::create('alcool-_cocktails', function (Blueprint $table) {
             $table->id();
+            $table->foreign('alcool-id')->references('id')->on('alcool');
             $table->timestamps();
         });
     }

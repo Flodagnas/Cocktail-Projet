@@ -15,6 +15,7 @@ class CreateFruitsCocktailsTable extends Migration
     {
         Schema::create('fruits-_cocktails', function (Blueprint $table) {
             $table->id();
+            $table->foreign('fruit-id')->references('id')->on('fruit');
             $table->timestamps();
         });
     }
