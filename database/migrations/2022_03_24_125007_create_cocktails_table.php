@@ -15,8 +15,8 @@ class CreateCocktailsTable extends Migration
     {
         Schema::create('cocktails', function (Blueprint $table) {
             $table->id();
-            $table->varchar('nom');
-            $table->int('degré');
+            $table->string('nom');
+            $table->integer('degré');
             $table->timestamps();
         });
     }
