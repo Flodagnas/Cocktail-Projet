@@ -17,6 +17,7 @@ class CreateFruitsCocktailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('idFruit');
             $table->foreign('idFruit')->references('id')->on('fruits');
+            $table->foreign('idCocktail')->references('id')->on('Cocktail');
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@ class CreateSoftCocktailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('idSoft');
             $table->foreign('idSoft')->references('id')->on('softs');
+            $table->foreign('idCocktail')->references('id')->on('Cocktail');
             $table->timestamps();
         });
     }

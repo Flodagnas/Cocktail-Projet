@@ -17,6 +17,7 @@ class CreateAlcoolCocktailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('idAlcool');
             $table->foreign('idAlcool')->references('id')->on('alcools');
+            $table->foreign('idCocktail')->references('id')->on('Cocktail');
             $table->timestamps();
         });
     }
