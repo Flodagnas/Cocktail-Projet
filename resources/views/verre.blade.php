@@ -27,7 +27,7 @@
         <a href="Fruits">Fruits</a><br>
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
-        <table border="1">
+        <table >
             <thead>
                 <th>Id</th>
                 <th>Name</th>

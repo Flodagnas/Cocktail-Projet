@@ -18,6 +18,10 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            thead{
+                float: center;
+                border: 1;
+            }
         </style>
     </head>
     <body>
@@ -26,7 +30,7 @@
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
-        <thead>
+        <thead >
             <th>Id</th>
             <th>Name</th>
             <th>Photo</th>
