@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Model\Alcool;
+use App\Models\Alcool as ModelsAlcool;
 
 class AlcoolController extends Controller
 {
     public function getAllAlcool(){
-        return (Alcool::all());
+        $alcools = Alcool::all();
+        return $alcools;
     }
 
     public function getAlcoolById($id) {
