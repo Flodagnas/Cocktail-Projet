@@ -31,6 +31,11 @@
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
+
+        <form action="/addAlcool" method="POST">
+            <input type="text">
+            <button type="submit">Valider</button>
+        </form>
         <table border="1">
             <thead>
                 <tr>

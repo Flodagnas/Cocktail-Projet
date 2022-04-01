@@ -26,7 +26,7 @@ Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
 
 Route::get('/Alcools', [AlcoolController::class, 'displayAllAlcools']);
 
-Route::get('/Fruit', [FruitController::class, 'displayAllFruits']);
+Route::get('/Fruits', [FruitController::class, 'displayAllFruits']);
 
 Route::get('/Softs', [SoftController::class, 'displayAllSofts']);
 
