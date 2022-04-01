@@ -1,10 +1,3 @@
-@php 
-
-use App\Http\Controllers\AlcoolController; 
-$var = AlcoolController::getAllAlcool();
-
-@endphp
-
 <DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -41,7 +34,7 @@ $var = AlcoolController::getAllAlcool();
             </tr>
         </thead>
         <Tbody>
-            @foreach ($AlcoolControler::getAllAlcool() as $alcool)
+            @foreach ($alcools as $alcool)
             <tr>
                 <td>{{ $alcool.id; }}</td>
                 <td>{{ $alcool.name; }}</td>

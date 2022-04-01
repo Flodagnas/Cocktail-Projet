@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlcoolController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,7 @@ Route::get('/Sirops', function () {
     return view('sirop');
 });
 
-Route::get('/Alcools', function () {
-    return view('alcool');
-});
+Route::get('/Alcools', [AlcoolController::class, 'displayAllAlcools']);
 
 Route::get('/Fruits', function () {
     return view('fruit');
