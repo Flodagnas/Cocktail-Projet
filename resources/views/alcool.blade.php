@@ -36,8 +36,8 @@
         <Tbody>
             @foreach ($alcools as $alcool)
             <tr>
-                <td>{{ $alcool.id; }}</td>
-                <td>{{ $alcool.name; }}</td>
+                <td>{{ $alcool->id }}</td>
+                <td>{{ $alcool->name }}</td>
                 <td>none</td>
             </tr>
             @endforeach
