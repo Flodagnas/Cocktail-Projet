@@ -7,30 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class Verre extends Model
 {
-    use HasFactory;
+    //use HasFactory;
 
     public function getAllVerre(){
-        $Verres = self::all();
-        return $Verres;
+        $verres = self::all();
+        return $verres;
     }
 
     public function getVerreById($id) {
-        return (self::where('id', $id));
+        return (Verre::where('id', $id));
     }
 
     public function getVerreByName($name){
-        return (self::where('name', $name));
+        return (Verre::where('name', $name));
     }
 
     public function addVerres($name){
-        self::create(['name' => $name]);
+        Verre::create(['name' => $name]);
     }
 
     public function updateVerre($name, $newName){
-        self::where('name', [$name])->update(['name' => $newName]);
+        Verre::where('name', [$name])->update(['name' => $newName]);
     }
 
     public function deleteVerre($name){
-        self::where('name', [$name])->delete();
+        Verre::where('name', [$name])->delete();
     }
+
 }

@@ -10,6 +10,6 @@ class SiropController extends Controller
 {
     public function displayAllSirops(){
         $sirops = Sirop::all();
-        return view('sirop', compact('siros'));
-     }
+        return view('sirop', compact('sirops'));
+    }
 }

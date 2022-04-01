@@ -11,5 +11,5 @@ class SoftController extends Controller
     public function displayAllSofts(){
         $softs = Soft::all();
         return view('soft', compact('softs'));
-     }
+    }
 }

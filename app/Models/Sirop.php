@@ -7,30 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sirop extends Model
 {
-    use HasFactory;
+    //use HasFactory;
 
     public function getAllSirop(){
-        $Sirops = self::all();
-        return $Sirops;
+        $sirops = self::all();
+        return $sirops;
     }
 
     public function getSiropById($id) {
-        return (self::where('id', $id));
+        return (Sirop::where('id', $id));
     }
 
     public function getSiropByName($name){
-        return (self::where('name', $name));
+        return (Sirop::where('name', $name));
     }
 
     public function addSirops($name){
-        self::create(['name' => $name]);
+        Sirop::create(['name' => $name]);
     }
 
     public function updateSirop($name, $newName){
-        self::where('name', [$name])->update(['name' => $newName]);
+        Sirop::where('name', [$name])->update(['name' => $newName]);
     }
 
     public function deleteSirop($name){
-        self::where('name', [$name])->delete();
+        Sirop::where('name', [$name])->delete();
     }
+
 }

@@ -7,30 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class Soft extends Model
 {
-    use HasFactory;
+    //use HasFactory;
 
     public function getAllSoft(){
-        $Softs = self::all();
-        return $Softs;
+        $softs = self::all();
+        return $softs;
     }
 
     public function getSoftById($id) {
-        return (self::where('id', $id));
+        return (Soft::where('id', $id));
     }
 
     public function getSoftByName($name){
-        return (self::where('name', $name));
+        return (Soft::where('name', $name));
     }
 
     public function addSofts($name){
-        self::create(['name' => $name]);
+        Soft::create(['name' => $name]);
     }
 
     public function updateSoft($name, $newName){
-        self::where('name', [$name])->update(['name' => $newName]);
+        Soft::where('name', [$name])->update(['name' => $newName]);
     }
 
     public function deleteSoft($name){
-        self::where('name', [$name])->delete();
+        Soft::where('name', [$name])->delete();
     }
+
 }

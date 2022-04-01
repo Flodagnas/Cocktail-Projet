@@ -8,9 +8,8 @@ use App\Models\Alcool;
 
 class AlcoolController extends Controller
 {
-   public function displayAllAlcools(){
+    public function displayAllAlcools(){
        $alcools = Alcool::all();
        return view('alcool', compact('alcools'));
     }
-
 }

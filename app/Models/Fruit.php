@@ -7,30 +7,32 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fruit extends Model
 {
-    use HasFactory;
+    //use HasFactory;
 
     public function getAllFruit(){
-        $Fruits = self::all();
-        return $Fruits;
+        $fruits = self::all();
+        return $fruits;
     }
 
     public function getFruitById($id) {
-        return (self::where('id', $id));
+        return (Fruit::where('id', $id));
     }
 
     public function getFruitByName($name){
-        return (self::where('name', $name));
+        return (Fruit::where('name', $name));
     }
 
     public function addFruits($name){
-        self::create(['name' => $name]);
+        Fruit::create(['name' => $name]);
     }
 
     public function updateFruit($name, $newName){
-        self::where('name', [$name])->update(['name' => $newName]);
+        Fruit::where('name', [$name])->update(['name' => $newName]);
     }
 
     public function deleteFruit($name){
-        self::where('name', [$name])->delete();
+        Fruit::where('name', [$name])->delete();
     }
+
+    
 }

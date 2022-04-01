@@ -11,5 +11,5 @@ class VerreController extends Controller
     public function displayAllVerres(){
         $verres = Verre::all();
         return view('verre', compact('verres'));
-     }
+    }
 }

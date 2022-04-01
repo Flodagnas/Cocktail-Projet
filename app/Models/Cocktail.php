@@ -7,30 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cocktail extends Model
 {
-    use HasFactory;
+    //use HasFactory;
 
     public function getAllCocktail(){
-        $Cocktails = self::all();
-        return $Cocktails;
+        $cocktails = self::all();
+        return $cocktails;
     }
 
     public function getCocktailById($id) {
-        return (self::where('id', $id));
+        return (Cocktail::where('id', $id));
     }
 
     public function getCocktailByName($name){
-        return (self::where('name', $name));
+        return (Cocktail::where('name', $name));
     }
 
     public function addCocktails($name){
-        self::create(['name' => $name]);
+        Cocktail::create(['name' => $name]);
     }
 
     public function updateCocktail($name, $newName){
-        self::where('name', [$name])->update(['name' => $newName]);
+        Cocktail::where('name', [$name])->update(['name' => $newName]);
     }
 
     public function deleteCocktail($name){
-        self::where('name', [$name])->delete();
+        Cocktail::where('name', [$name])->delete();
     }
+
 }
