@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
 
 Route::get('/Alcools', [AlcoolController::class, 'displayAllAlcools']);
+Route::post('/addAlcool', [AlcoolController::class, 'AddAlcool'])->name('AddAlcool');
 
 Route::get('/Fruits', [FruitController::class, 'displayAllFruits']);
 

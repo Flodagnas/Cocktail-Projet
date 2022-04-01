@@ -33,7 +33,7 @@
         <a href="Verres">Verres</a><br>
 
         <form action="/addAlcool" method="POST">
-            <input type="text">
+            <input type="text" name="name">
             <button type="submit">Valider</button>
         </form>
         <table border="1">
