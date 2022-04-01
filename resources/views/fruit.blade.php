@@ -22,17 +22,25 @@
     </head>
     <body>
         <h1>Fruits</h1>
-        <a href="Alcools">Alcools</a><br>
+        <a href="fruits">fruits</a><br>
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
         <thead>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Photo</th>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Photo</th>
+            </tr>
         </thead>
         <Tbody>
-            
+            @foreach ($fruits as $fruit)
+            <tr>
+                <td>{{ $fruit->id }}</td>
+                <td>{{ $fruit->name }}</td>
+                <td>none</td>
+            </tr>
+            @endforeach
         </Tbody>
     </body>
 </html>
