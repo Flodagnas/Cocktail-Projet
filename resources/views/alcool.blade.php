@@ -27,12 +27,20 @@
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
         <thead>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Photo</th>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Photo</th>
+            </tr>
         </thead>
         <Tbody>
-            
+            @foreach ($AlcoolControler::getAllAlcool() as $alcool)
+            <tr>
+                <td>{{ $alcool.id; }}</td>
+                <td>{{ $alcool.name; }}</td>
+                <td>none</td>
+            </tr>
+            @endforeach
         </Tbody>
     </body>
 </html>
