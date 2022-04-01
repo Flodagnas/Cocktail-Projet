@@ -1,3 +1,10 @@
+@php 
+
+use App\Http\Controllers\AlcoolController.php; 
+$var = AlcoolController::getAllAlcool();
+
+@endphp
+
 <DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
