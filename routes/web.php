@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\AlcoolController;
+use App\Http\Controllers\SiropController;
+use App\Http\Controllers\FruitController;
+use App\Http\Controllers\SoftController;
+use App\Http\Controllers\VerreController;
 use Illuminate\Support\Facades\Route;
 
 /*
