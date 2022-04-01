@@ -1,6 +1,6 @@
 @php 
 
-use App\Http\Controllers\AlcoolController.php; 
+use App\Http\Controllers\AlcoolController; 
 $var = AlcoolController::getAllAlcool();
 
 @endphp
