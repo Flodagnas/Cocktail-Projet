@@ -18,20 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Sirops', function () {
-    return view('sirop');
-});
+Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
 
 Route::get('/Alcools', [AlcoolController::class, 'displayAllAlcools']);
 
-Route::get('/Fruits', function () {
-    return view('fruit');
-});
+Route::get('/Fruit', [FruitController::class, 'displayAllFruits']);
 
-Route::get('/Softs', function () {
-    return view('soft');
-});
+Route::get('/Softs', [SoftController::class, 'displayAllSofts']);
 
-Route::get('/Verres', function () {
-    return view('verre');
-});
+Route::get('/Verres', [VerreController::class, 'displayAllVerres']);
