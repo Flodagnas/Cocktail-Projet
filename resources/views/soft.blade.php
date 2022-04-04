@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="../css/table.css" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -17,6 +18,9 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+            }
+            table {
+                text-align: center;
             }
         </style>
     </head>
@@ -44,7 +48,7 @@
                 <tr>
                     <td>{{ $soft->id }}</td>
                     <td>{{ $soft->name }}</td>
-                    <td>{{ $soft->photo }}</td>
+                    <td><img src={{ $soft->photo }} height=180px align="middle"></td>
                 </tr>
                 @endforeach
                 @endif
