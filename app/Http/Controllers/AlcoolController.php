@@ -13,8 +13,8 @@ class AlcoolController extends Controller
        return view('alcool', compact('alcools'));
     }
 
-    public function AddAlcool(){
-        $name = request()->get('name');
+    public static function AddAlcool(Request $request){
+        $name = $request->input('name');
         Alcool::addAlcools($name);
     }
 }
