@@ -32,7 +32,7 @@
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
 
-        <form action="{{ route('addAlcool') }}" method="POST">
+        <form action="{{ route('newAlcool') }}" method="POST">
             @csrf
             <input type="text" name="name">
             <button type="submit">Valider</button>
