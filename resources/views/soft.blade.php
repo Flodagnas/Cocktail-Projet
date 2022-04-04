@@ -37,7 +37,6 @@
             <table border="1">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Photo</th>
                 </tr>
@@ -46,7 +45,6 @@
                 @if(!is_null($softs) && !empty($softs))
                 @foreach ($softs as $soft)
                 <tr>
-                    <td>{{ $soft->id }}</td>
                     <td>{{ $soft->name }}</td>
                     <td><img src={{ $soft->photo }} height=180px align="middle"></td>
                 </tr>

@@ -32,26 +32,21 @@
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
 
-        <form action="{{ route('addAlcool') }}" method="POST">
-            @csrf
-            <input type="text" name="name">
-            <button type="submit">Valider</button>
-        </form>
         <table border="1">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Photo</th>
+                    <th>Type Alcool</th>
                 </tr>
             </thead>
             <tbody>
                 @if(!is_null($alcools) && !empty($alcools))
                 @foreach ($alcools as $alcool)
                 <tr>
-                    <td>{{ $alcool->id }}</td>
                     <td>{{ $alcool->name }}</td>
-                    <td>{{ $alcool->photo }}</td>
+                    <td><img src={{ $alcool->photo }} height=180px></td>
+                    <td>{{ $alcool->type }}</td>
                 </tr>
                 @endforeach
                 @endif

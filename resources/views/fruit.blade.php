@@ -33,7 +33,6 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Photo</th>
                 </tr>
@@ -42,7 +41,6 @@
                 @if(!is_null($fruits) && !empty($fruits))
                 @foreach ($fruits as $fruit)
                 <tr>
-                    <td>{{ $fruit->id }}</td>
                     <td>{{ $fruit->name }}</td>
                     <td><img src={{ $fruit->photo }} height=180px></td>
                 </tr>
