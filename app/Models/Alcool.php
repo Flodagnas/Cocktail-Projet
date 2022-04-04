@@ -22,7 +22,7 @@ class Alcool extends Model
         return (self::where('name', $name));
     }
 
-    public function addAlcools($name){
+    public static function addAlcools($name){
         self::create(['name' => $name]);
     }
 
