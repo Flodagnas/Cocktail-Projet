@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\AlcoolController;
+use App\Http\Controllers\SiropController;
+use App\Http\Controllers\FruitController;
+use App\Http\Controllers\SoftController;
+use App\Http\Controllers\VerreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,25 +19,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/Sirops', function () {
-    return view('sirop');
-});
-
-Route::get('/Alcools', function () {
     return view('alcool');
 });
 
-Route::get('/Fruits', function () {
-    return view('fruit');
-});
+Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
 
-Route::get('/Softs', function () {
-    return view('soft');
-});
+Route::get('/Alcools', [AlcoolController::class, 'displayAllAlcools']);
+Route::post('/Alcool/new', 'AlcoolController@AddAlcool')->name('newAlcool');
 
-Route::get('/Verres', function () {
-    return view('verre');
-});
+Route::get('/Fruits', [FruitController::class, 'displayAllFruits']);
+
+Route::get('/Softs', [SoftController::class, 'displayAllSofts']);
+
+Route::get('/Verres', [VerreController::class, 'displayAllVerres']);
