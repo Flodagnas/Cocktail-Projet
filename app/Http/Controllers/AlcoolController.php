@@ -14,7 +14,7 @@ class AlcoolController extends Controller
     }
 
     public static function AddAlcool(Request $request){
-        $name = $request->input('name');
+        protected $name = $request->input('name');
         Alcool::addAlcools($name);
     }
 }
