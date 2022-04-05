@@ -19,6 +19,9 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            h1{
+                text-align: center;
+            }
             table {
                 text-align: center;
             }
@@ -26,6 +29,7 @@
     </head>
     <body>
         <h1>Fruits</h1>
+        <a href="/">Home</a><br>
         <a href="Alcools">Alcools</a><br>
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
