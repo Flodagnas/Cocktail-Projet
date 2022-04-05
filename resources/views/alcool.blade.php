@@ -37,7 +37,10 @@
 
         <form action="{{ route('newAlcool') }}" method="POST">
             @csrf
+            <label for="name">Nom :</label>
             <input type="text" name="name">
+            <label for="url">url image :</label>
+            <input type="text" name="url">
             <button type="submit">Valider</button>
         </form>
         <table border="1">

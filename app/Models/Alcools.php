@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alcools extends Model
 {
-    public $fillable = ['name'];
+    public $fillable = ['name', 'url'];
     use HasFactory;
 
     public function getAllAlcool(){
@@ -23,8 +23,8 @@ class Alcools extends Model
         return (self::where('name', $name));
     }
 
-    public static function addAlcools($name){
-        self::create(['name' => $name]);
+    public static function addAlcools($name, $url){
+        self::create(['name' => $name, 'photo' => $url]);
     }
 
     public function updateAlcool($name, $newName){
