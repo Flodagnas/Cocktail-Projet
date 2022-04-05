@@ -45,6 +45,7 @@
                 <tr>
                     <th>Name</th>
                     <th>Photo</th>
+                    <th>Degré</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,6 +54,7 @@
                 <tr>
                     <td>{{ $alcool->name }}</td>
                     <td><img src={{ $alcool->photo }} height=180px></td>
+                    <td>{{ $alcool->degré }}%</td>
                 </tr>
                 @endforeach
                 @endif
