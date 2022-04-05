@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AlcoolController;
+use App\Http\Controllers\AlcoolsController;
 use App\Http\Controllers\SiropController;
 use App\Http\Controllers\FruitController;
 use App\Http\Controllers\SoftController;
@@ -24,8 +24,8 @@ Route::get('/', function () {
 
 Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
 
-Route::get('/Alcools', [AlcoolController::class, 'displayAllAlcools']);
-Route::post('/Alcool/new', [AlcoolController::class ,'AddAlcool'])->name('newAlcool');
+Route::get('/Alcools', [AlcoolsController::class, 'displayAllAlcools']);
+Route::post('/Alcool/new', [AlcoolsController::class ,'AddAlcool'])->name('newAlcool');
 
 Route::get('/Fruits', [FruitController::class, 'displayAllFruits']);
 

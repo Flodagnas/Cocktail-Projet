@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Alcool;
+use App\Models\Alcools;
 
-class AlcoolController extends Controller
+class AlcoolsController extends Controller
 {
     public function displayAllAlcools(){
-       $alcools = Alcool::all();
+       $alcools = Alcools::all();
        return view('alcool', compact('alcools'));
     }
 
     public static function AddAlcool(Request $request){
         $name = $request->input('name');
-        Alcool::addAlcools($name);
+        Alcools::addAlcools($name);
     }
 }
