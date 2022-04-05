@@ -40,7 +40,6 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Photo</th>
                 </tr>
@@ -49,9 +48,8 @@
                 @if(!is_null($alcools) && !empty($alcools))
                 @foreach ($alcools as $alcool)
                 <tr>
-                    <td>{{ $alcool->id }}</td>
                     <td>{{ $alcool->name }}</td>
-                    <td>{{ $alcool->photo }}</td>
+                    <td><img src={{ $alcool->photo }} height=180px></td>
                 </tr>
                 @endforeach
                 @endif

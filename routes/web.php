@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('alcool');
+    return view('cocktail');
 });
 
 Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);

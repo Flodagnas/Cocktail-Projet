@@ -17,6 +17,8 @@ class CreateVerresCocktailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('idVerre');
             $table->foreign('idVerre')->references('id')->on('verres');
+            $table->unsignedBigInteger('idCocktails');
+            $table->foreign('idCocktails')->references('id')->on('cocktails');
             $table->timestamps();
         });
     }
