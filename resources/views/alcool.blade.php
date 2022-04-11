@@ -41,6 +41,8 @@
             <input type="text" name="name">
             <label for="url">url image :</label>
             <input type="text" name="url">
+            <br>
+            <input type="text" name="type">
             <button type="submit">Valider</button>
         </form>
         <table border="1">
