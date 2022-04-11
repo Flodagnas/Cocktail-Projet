@@ -15,8 +15,7 @@ class AlcoolsController extends Controller
 
     public static function AddAlcool(Request $request){
         $name = $request->input('name');
-        $url = $request()->input('url');
-        $url = str_replace($url, "\\", "/");
+        $url = $request->input('url');
         Alcools::addAlcools($name, $url);
     }
 }
