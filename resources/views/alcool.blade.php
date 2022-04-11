@@ -59,7 +59,7 @@
                 @foreach ($alcools as $alcool)
                 <tr>
                     <td>{{ $alcool->name }}</td>
-                    <td>{{ $alcool->type-alcool }}</td>
+                    <td>{{ $alcool->typeAlcool }}</td>
                     <td><img src={{ $alcool->photo }} height=180px></td>
                 </tr>
                 @endforeach
