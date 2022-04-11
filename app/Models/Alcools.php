@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alcools extends Model
 {
-    public $fillable = ['name', 'photo'];
+    public $fillable = ['name', 'photo', 'type-alcool'];
     use HasFactory;
 
     public function getAllAlcool(){
