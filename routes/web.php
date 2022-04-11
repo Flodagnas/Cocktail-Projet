@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlcoolsController;
+use App\Http\Controllers\CocktailController;
 use App\Http\Controllers\SiropController;
 use App\Http\Controllers\FruitController;
 use App\Http\Controllers\SoftController;
@@ -18,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('cocktail');
-});
+Route::get('/', [CocktailController::class, 'displayAllCocktails']);
 
 Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
 
