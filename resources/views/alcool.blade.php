@@ -42,6 +42,7 @@
             <label for="url">url image :</label>
             <input type="text" name="url">
             <br>
+            <label for="type">type d'alcool :</label>
             <input type="text" name="type">
             <button type="submit">Valider</button>
         </form>
@@ -49,6 +50,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Type d'alcool</th>
                     <th>Photo</th>
                 </tr>
             </thead>
@@ -57,6 +59,7 @@
                 @foreach ($alcools as $alcool)
                 <tr>
                     <td>{{ $alcool->name }}</td>
+                    <td>{{ $alcool->type-alcool }}</td>
                     <td><img src={{ $alcool->photo }} height=180px></td>
                 </tr>
                 @endforeach

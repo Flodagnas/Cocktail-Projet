@@ -17,7 +17,7 @@ class AlcoolsController extends Controller
         $name = $request->input('name');
         $url = $request->input('url');
         $type = $request->input('type');
-        Alcools::addAlcools($name, $url);
+        Alcools::addAlcools($name, $url, $type);
         return redirect()->route('Alcools');
     }
 }
