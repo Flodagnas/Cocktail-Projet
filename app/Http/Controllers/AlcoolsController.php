@@ -17,5 +17,6 @@ class AlcoolsController extends Controller
         $name = $request->input('name');
         $url = $request->input('url');
         Alcools::addAlcools($name, $url);
+        displayAllAlcools();
     }
 }
