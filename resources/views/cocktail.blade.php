@@ -30,5 +30,34 @@
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Degré</th>
+                    <th>Alcool</th>
+                    <th>Fruit</th>
+                    <th>Sirop</th>
+                    <th>Soft</th>
+                    <th>Verre</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @if(!is_null($cocktails) && !empty($cocktails))
+                @foreach ($cocktails as $cocktail)
+                <tr>
+                    <td>{{ $cocktail->name }}</td>
+                    <td>{{ $cocktail->degré }}</td>
+                    <td>{{ $cocktail->alcool }}</td>
+                    <td>{{ $cocktail->fruit }}</td>
+                    <td>{{ $cocktail->sirop }}</td>
+                    <td>{{ $cocktail->soft }}</td>
+                    <td>{{ $cocktail->verre }}</td>
+                </tr>
+                @endforeach
+                @endif
+            </tbody>
+        </table>
     </body>
 </html>

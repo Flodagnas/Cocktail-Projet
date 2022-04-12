@@ -16,9 +16,17 @@ class CreateFruitsCocktailsTable extends Migration
         Schema::create('fruits-_cocktails', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idFruit');
-            $table->foreign('idFruit')->references('id')->on('fruits');
+            $table->foreign('idFruit')
+                ->references('id')
+                ->on('fruits')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->unsignedBigInteger('idCocktails');
-            $table->foreign('idCocktails')->references('id')->on('cocktails');
+            $table->foreign('idCocktails')
+                ->references('id')
+                ->on('cocktails')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }
