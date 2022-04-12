@@ -10,10 +10,10 @@ class Alcools extends Model
     public $fillable = ['name', 'photo', 'typeAlcool'];
     use HasFactory;
 
-    public function getAllAlcool(){
+    /*public function getAllAlcool(){
         $alcools = self::all();
         return $alcools;
-    }
+    }*/
 
     public function getAlcoolById($id) {
         return (self::where('id', $id));
