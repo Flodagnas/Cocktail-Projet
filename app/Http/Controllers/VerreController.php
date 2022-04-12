@@ -14,8 +14,8 @@ class VerreController extends Controller
     }
 
     public static function AddVerre(Request $request){
-        $name = $request()->input('name');
-        $img = $request()->input('url');
+        $name = $request->input('name');
+        $img = $request->input('url');
         Verre::addVerres($name, $img);
         return redirect()->route('Verres');
     }

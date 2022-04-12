@@ -14,8 +14,8 @@ class FruitController extends Controller
     }
 
     public static function AddFruit(Request $request){
-        $name = $request()->input('name');
-        $img = $request()->input('url');
+        $name = $request->input('name');
+        $img = $request->input('url');
         Fruit::addFruits($name, $img);
         return redirect()->route('Fruits');
     }

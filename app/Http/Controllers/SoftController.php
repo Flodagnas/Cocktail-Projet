@@ -14,8 +14,8 @@ class SoftController extends Controller
     }
 
     public static function AddSoft(Request $request){
-        $name = $request()->input('name');
-        $img = $request()->input('url');
+        $name = $request->input('name');
+        $img = $request->input('url');
         Soft::addSofts($name, $img);
         return redirect()->route('Softs');
     }

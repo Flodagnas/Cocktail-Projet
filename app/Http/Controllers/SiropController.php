@@ -14,8 +14,8 @@ class SiropController extends Controller
     }
 
     public static function AddSirop(Request $request){
-        $name = $request()->input('name');
-        $img = $request()->input('url');
+        $name = $request->input('name');
+        $img = $request->input('url');
         Sirop::addSirops($name, $img);
         return redirect()->route('Sirops');
     }
