@@ -22,14 +22,17 @@ Route::get('/', function () {
     return view('cocktail');
 });
 
-Route::get('/Sirops', [SiropController::class, 'displayAllSirops']);
+Route::get('/Sirops', [SiropController::class, 'displayAllSirops'])->name('Sirops');
+Route::post('/Sirop/new', [SiropController::class ,'AddFruits'])->name('newSirop');
 
 Route::get('/Alcools', [AlcoolsController::class, 'displayAllAlcools'])->name('Alcools');
 Route::post('/Alcool/new', [AlcoolsController::class ,'AddAlcool'])->name('newAlcool');
-Route::get('/Alcool/new', [AlcoolsController::class,'displayAllAlcools']);
 
-Route::get('/Fruits', [FruitController::class, 'displayAllFruits']);
+Route::get('/Fruits', [FruitController::class, 'displayAllFruits'])->name('Fruits');
+Route::post('/Fruit/new', [FruitController::class ,'AddFruits'])->name('newFruit');
 
-Route::get('/Softs', [SoftController::class, 'displayAllSofts']);
+Route::get('/Softs', [SoftController::class, 'displayAllSofts'])->name('Softs');
+Route::post('/Soft/new', [SoftController::class ,'AddVerre'])->name('newSoft');
 
-Route::get('/Verres', [VerreController::class, 'displayAllVerres']);
+Route::get('/Verres', [VerreController::class, 'displayAllVerres'])->name('Verres');
+Route::post('/Verre/new', [VerreController::class ,'AddVerre'])->name('newVerre');

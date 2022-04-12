@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fruit extends Model
 {
-    //use HasFactory;
+    use HasFactory;
+
+    public $fillable = ['name', 'photo'];
 
     public function getAllFruit(){
         $fruits = self::all();
@@ -22,8 +24,8 @@ class Fruit extends Model
         return (Fruit::where('name', $name));
     }
 
-    public function addFruits($name){
-        Fruit::create(['name' => $name]);
+    public static function addFruits($name, $urlImage){
+        Fruit::create(['name' => $name, 'photo' => $urlImage]);
     }
 
     public function updateFruit($name, $newName){

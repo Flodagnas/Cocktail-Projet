@@ -34,6 +34,15 @@
         <a href="Fruits">Fruits</a><br>
         <a href="Sirops">Sirops</a><br>
         <a href="Verres">Verres</a><br>
+        <form action="{{ route('newSoft') }}" method="POST">
+            @csrf
+            <label for="name">Nom :</label>
+            <input type="text" name="name">
+            <label for="url">url image :</label>
+            <input type="text" name="url">
+            <br>
+            <button type="submit">Valider</button>
+        </form>
         <thead >
             <th>Id</th>
             <th>Name</th>

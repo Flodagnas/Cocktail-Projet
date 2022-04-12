@@ -12,4 +12,11 @@ class FruitController extends Controller
         $fruits = Fruit::all();
         return view('fruit', compact('fruits'));
     }
+
+    public function addFruit(Request $request){
+        $name = $request()->input('name');
+        $img = $request()->input('url');
+        Fruit::addFruits($name, $img);
+        return redirect()->route('Fruits');
+    }
 }

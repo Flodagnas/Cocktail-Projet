@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Soft extends Model
 {
-    //use HasFactory;
+    use HasFactory;
+    public $fillable = ['name', 'photo'];
 
     public function getAllSoft(){
         $softs = self::all();
@@ -22,8 +23,8 @@ class Soft extends Model
         return (Soft::where('name', $name));
     }
 
-    public function addSofts($name){
-        Soft::create(['name' => $name]);
+    public static function addSofts($name, $photo){
+        Soft::create(['name' => $name, 'photo' => $photo]);
     }
 
     public function updateSoft($name, $newName){

@@ -30,6 +30,15 @@
         <a href="Fruits">Fruits</a><br>
         <a href="Sirops">Sirops</a><br>
         <a href="Softs">Softs</a><br>
+        <form action="{{ route('newVerre') }}" method="POST">
+            @csrf
+            <label for="name">Nom :</label>
+            <input type="text" name="name">
+            <label for="url">url image :</label>
+            <input type="text" name="url">
+            <br>
+            <button type="submit">Valider</button>
+        </form>
         <table >
             <thead>
                 <tr>

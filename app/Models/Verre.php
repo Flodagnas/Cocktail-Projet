@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Verre extends Model
 {
-    //use HasFactory;
+    use HasFactory;
+    public $fillable = ['name', 'photo'];
 
     public function getAllVerre(){
         $verres = self::all();
@@ -22,8 +23,8 @@ class Verre extends Model
         return (Verre::where('name', $name));
     }
 
-    public function addVerres($name){
-        Verre::create(['name' => $name]);
+    public static function addVerres($name, $photo){
+        Verre::create(['name' => $name, 'photo' => $photo]);
     }
 
     public function updateVerre($name, $newName){

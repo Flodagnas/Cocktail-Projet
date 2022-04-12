@@ -12,4 +12,11 @@ class SoftController extends Controller
         $softs = Soft::all();
         return view('soft', compact('softs'));
     }
+
+    public function addSoft(Request $request){
+        $name = $request()->input('name');
+        $img = $request()->input('url');
+        Soft::addSofts($name, $img);
+        return redirect()->route('Softs');
+    }
 }

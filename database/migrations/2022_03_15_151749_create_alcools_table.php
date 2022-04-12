@@ -18,7 +18,11 @@ class CreateAlcoolsTable extends Migration
             $table->string("name");
             $table->string("photo");
             $table->unsignedBigInteger('Type_Alcool');
-            $table->foreign('Type_Alcool')->references('id')->on('type_alcools');
+            $table->foreign('Type_Alcool')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+                
             $table->timestamps();
         });
     }

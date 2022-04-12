@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sirop extends Model
 {
-    //use HasFactory;
+    use HasFactory;
+    public $fillable = ['name', 'photo'];
 
     public function getAllSirop(){
         $sirops = self::all();
@@ -22,8 +23,8 @@ class Sirop extends Model
         return (Sirop::where('name', $name));
     }
 
-    public function addSirops($name){
-        Sirop::create(['name' => $name]);
+    public static function addSirops($name, $photo){
+        Sirop::create(['name' => $name, 'photo' => $photo]);
     }
 
     public function updateSirop($name, $newName){

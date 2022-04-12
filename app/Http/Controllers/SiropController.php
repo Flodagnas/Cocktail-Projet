@@ -12,4 +12,11 @@ class SiropController extends Controller
         $sirops = Sirop::all();
         return view('sirop', compact('sirops'));
     }
+
+    public function addSirop(Request $request){
+        $name = $request()->input('name');
+        $img = $request()->input('url');
+        Sirop::addSirops($name, $img);
+        return redirect()->route('Sirops');
+    }
 }
