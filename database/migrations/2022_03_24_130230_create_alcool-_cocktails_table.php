@@ -16,9 +16,17 @@ class CreateAlcoolCocktailsTable extends Migration
         Schema::create('alcool-_cocktails', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idAlcool');
-            $table->foreign('idAlcool')->references('id')->on('alcool');
+            $table->foreign('idAlcool')
+                ->references('id')
+                ->on('alcools')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->unsignedBigInteger('idCocktails');
-            $table->foreign('idCocktails')->references('id')->on('cocktails');
+            $table->foreign('idCocktails')
+                ->references('id')
+                ->on('cocktails')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }
