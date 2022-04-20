@@ -25,6 +25,10 @@
     </head>
     <body >
         <h1>HOME</h1>
+        <a href="/login">Login</a><br>
+        <a href="/register">Register</a><br>
+        <a href="/logout">Logout</a><br>
+        <br>
         <a href="Alcools">Alcools</a><br>
         <a href="Fruits">Fruits</a><br>
         <a href="Sirops">Sirops</a><br>

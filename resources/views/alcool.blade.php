@@ -29,6 +29,9 @@
     </head>
     <body>
         <h1>Alcools</h1>
+        <a href="/login">Login</a><br>
+        <a href="/register">Register</a><br>
+        <a href="/logout">Logout</a><br>
         <a href="/">Home</a><br>
         <a href="Fruits">Fruits</a><br>
         <a href="Sirops">Sirops</a><br>
