@@ -34,6 +34,7 @@
         <a href="Fruits">Fruits</a><br>
         <a href="Softs">Softs</a><br>
         <a href="Verres">Verres</a><br>
+        <br>
         <form action="{{ route('newSirop') }}" method="POST">
             @csrf
             <label for="name">Nom :</label>

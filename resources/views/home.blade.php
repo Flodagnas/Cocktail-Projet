@@ -20,4 +20,12 @@
         </div>
     </div>
 </div>
+<br>
+<div>
+    <a href="Alcools">Alcools</a><br>
+    <a href="Fruits">Fruits</a><br>
+    <a href="Sirops">Sirops</a><br>
+    <a href="Softs">Softs</a><br>
+    <a href="Verres">Verres</a><br>
+</div>
 @endsection

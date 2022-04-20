@@ -18,7 +18,10 @@ class Users extends Migration
             $table->string("name");
             $table->string("email");
             $table->string("password");
-            $table->string("deleted_at");
+            $table->rememberToken();
+            $table->boolean('activated')->default(false);
+            $table->string('token');
+            $table->string("deleted_at")->default(NULL);
             $table->timestamps();
             
         });
