@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alcools extends Model
 {
-    public $fillable = ['name', 'photo', 'typeAlcool'];
+    public $fillable = ['name', 'photo', 'Type_Alcool'];
     use HasFactory;
 
-    public function getAllAlcool(){
-        $alcools = self::all();
-        return $alcools;
+    public function Alcools()
+    {
+        return $this->belongsTo('App\Models\type_alcools', "id");
     }
 
     public function getAlcoolById($id) {
@@ -24,7 +24,7 @@ class Alcools extends Model
     }
 
     public static function addAlcools($name, $url, $type){
-        self::create(['name' => $name, 'photo' => $url, 'type-alcool'=>$type]);
+        self::create(['name' => $name, 'photo' => $url, 'Type_Alcool'=>$type]);
     }
 
     public function updateAlcool($name, $newName){

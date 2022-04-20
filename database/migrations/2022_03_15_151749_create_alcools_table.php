@@ -15,14 +15,10 @@ class CreateAlcoolsTable extends Migration
     {
         Schema::create('alcools', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("photo");
-            $table->unsignedBigInteger('Type_Alcool');
-            $table->foreign('Type_Alcool')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-                
+            $table->string('name');
+            $table->string('photo');
+            $table->unsignedBigInteger('Type_Alcool')->nullable();
+            $table->foreign('Type_Alcool')->references('id')->on('type_alcools');
             $table->timestamps();
         });
     }

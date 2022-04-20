@@ -35,3 +35,28 @@ Route::post('/Soft/new', [SoftController::class ,'AddVerre'])->name('newSoft');
 
 Route::get('/Verres', [VerreController::class, 'displayAllVerres'])->name('Verres');
 Route::post('/Verre/new', [VerreController::class ,'AddVerre'])->name('newVerre');
+Auth::routes();
+// Public Routes
+Route::group(['middleware' => ['web', 'activity', 'checkblocked']], function () {
+
+    // Activation Routes
+    Route::get('/activate', ['as' => 'activate', 'uses' => 'App\Http\Controllers\Auth\ActivateController@initial']);
+
+    Route::get('/activate/{token}', ['as' => 'authenticated.activate', 'uses' => 'App\Http\Controllers\Auth\ActivateController@activate']);
+    Route::get('/activation', ['as' => 'authenticated.activation-resend', 'uses' => 'App\Http\Controllers\Auth\ActivateController@resend']);
+    Route::get('/exceeded', ['as' => 'exceeded', 'uses' => 'App\Http\Controllers\Auth\ActivateController@exceeded']);
+
+    // Socialite Register Routes
+    Route::get('/social/redirect/{provider}', ['as' => 'social.redirect', 'uses' => 'App\Http\Controllers\Auth\SocialController@getSocialRedirect']);
+    Route::get('/social/handle/{provider}', ['as' => 'social.handle', 'uses' => 'App\Http\Controllers\Auth\SocialController@getSocialHandle']);
+});
+
+// Registered and Activated User Routes
+Route::group(['middleware' => ['auth', 'activated', 'activity', 'checkblocked']], function () {
+
+    // Activation Routes
+    Route::get('/activation-required', ['uses' => 'App\Http\Controllers\Auth\ActivateController@activationRequired'])->name('activation-required');
+    Route::get('/logout', ['uses' => 'App\Http\Controllers\Auth\LoginController@logout'])->name('logout');
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
