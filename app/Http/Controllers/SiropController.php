@@ -13,9 +13,9 @@ class SiropController extends Controller
         return view('sirop', compact('sirops'));
     }
 
-    public function addSirop(Request $request){
-        $name = $request()->input('name');
-        $img = $request()->input('url');
+    public static function AddSirop(Request $request){
+        $name = $request->input('name');
+        $img = $request->input('url');
         Sirop::addSirops($name, $img);
         return redirect()->route('Sirops');
     }

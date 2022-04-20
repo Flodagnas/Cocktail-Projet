@@ -13,9 +13,9 @@ class FruitController extends Controller
         return view('fruit', compact('fruits'));
     }
 
-    public function addFruit(Request $request){
-        $name = $request()->input('name');
-        $img = $request()->input('url');
+    public static function AddFruit(Request $request){
+        $name = $request->input('name');
+        $img = $request->input('url');
         Fruit::addFruits($name, $img);
         return redirect()->route('Fruits');
     }
