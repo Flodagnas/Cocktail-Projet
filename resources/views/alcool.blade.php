@@ -54,6 +54,7 @@
                     <th>Name</th>
                     <th>Type d'alcool</th>
                     <th>Photo</th>
+                    <th>Degré</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,6 +64,7 @@
                     <td>{{ $alcool->name }}</td>
                     <td>{{ $alcool->Type_Alcool }}</td>
                     <td><img src={{ $alcool->photo }} height=180px></td>
+                    <td>{{ $alcool->degré }}%</td>
                 </tr>
                 @endforeach
                 @endif
